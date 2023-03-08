@@ -73,4 +73,8 @@ const database = {
   export const getGuests = () => {
     return database.guests.map(guestObject => ({...guestObject}))
   }
+
+  export const getAreaServices = () => {
+    return database.areaServices.map(Object => ({...Object}))
+  }
   

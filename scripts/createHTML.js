@@ -1,3 +1,6 @@
+import { areaCards } from "./areaCards.js";
+import { guestList } from "./guests.js";
+
 export const createHTML = () => {
     return `
 
@@ -8,11 +11,11 @@ export const createHTML = () => {
 
         <section id="main-container">
             <article class="areas container">
-                !AREA CARDS GO HERE!
+                ${areaCards()}
             </article>
 
-            <article class="parkguests container">
-                !GUEST LIST GO HERE!
+            <article class="guests container">
+                ${guestList()}
             </article>
         </section>
 
