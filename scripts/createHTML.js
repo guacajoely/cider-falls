@@ -1,5 +1,6 @@
 import { areaCards } from "./areaCards.js";
 import { guestList } from "./guests.js";
+import { Services } from "./services.js";
 
 export const createHTML = () => {
     return `
@@ -10,9 +11,15 @@ export const createHTML = () => {
         </header>
 
         <section id="main-container">
-            <article class="areas container">
-                ${areaCards()}
-            </article>
+            <div class="services-and-areas container"
+                <article class="services container">
+                ${Services()}
+                </article>
+
+                <article class="areas container">
+                    ${areaCards()}
+                </article>
+            </div>
 
             <article class="guests container">
                 ${guestList()}
