@@ -1,0 +1,47 @@
+body {
+    color: whitesmoke;
+    background-color: darkgreen;
+    margin: 0;
+}
+
+header, footer, .container {
+    display: flex;
+    align-items: center;
+}
+
+header, footer {
+    width: 100%;
+    height:100px;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    border-bottom: thin solid green;
+}
+
+#img-header {
+    width:100px;
+    margin-right: 20px;
+    border-right: thin solid green;
+}
+
+.areas {
+    margin-top: 150px;
+    border-bottom: thin solid green;
+}
+
+.container {
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    border-top: thin solid green;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
