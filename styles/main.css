@@ -4,9 +4,10 @@ body {
     margin: 0;
 }
 
-header, footer, .container {
+header, footer, .container, #main-container {
     display: flex;
     align-items: center;
+    border: thin solid lime;
 }
 
 header, footer {
@@ -23,23 +24,22 @@ header {
 #img-header {
     width:100px;
     margin-right: 20px;
-    border-right: thin solid green;
 }
 
-.areas {
-    margin-top: 150px;
-    border-bottom: thin solid green;
+#main-container {
+    width: 100%;
+    height: 600px;
+    margin: 150px 0px;
+    justify-content: space-between;
 }
 
 .container {
-    width: 100%;
-    height: 200px;
+    margin: 20px;
 }
 
 footer {
     position: fixed;
     bottom: 0px;
-    border-top: thin solid green;
     flex-direction: column;
     justify-content: center;
     text-align: center;

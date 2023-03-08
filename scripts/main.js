@@ -1,3 +1,3 @@
 import { createHTML } from "./createHTML.js";
 
-document.querySelector("#content").innerHTML = 
+document.querySelector("#content").innerHTML = createHTML()
