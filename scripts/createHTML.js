@@ -20,9 +20,9 @@ export const createHTML = () => {
         </section>
 
         <footer>
+            <div id="address info">100 Forest Rd <br>Somewhere, WV 12345</div>
             <div id="phone info">1-800-555-PARK</div>
             <div id="email info">admin@CiderFalls.com</div>
-            <div id="address info">100 Forest Rd <br>Somewhere, WV 12345</div>
         </footer>
 
         
