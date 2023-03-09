@@ -17,7 +17,7 @@ export const services = () => {
 }
 
 
-//CREATE FUNCTION THAT LOOPS THROUGH THE areaService ARRAY AND GRAB EACH AREA WITH THAT SERVICE AND THROW IT IN AN ARRAY
+//FUNCTION THAT LOOPS THROUGH THE areaService ARRAY AND GRAB EACH AREA WITH THAT SERVICE AND THROW IT IN AN ARRAY
 const createMatchingAreasArray = (primaryKey, arrayOfServices) => {
 
     const matchedAreaIDs = []
@@ -30,7 +30,7 @@ const createMatchingAreasArray = (primaryKey, arrayOfServices) => {
 return matchedAreaIDs
 }
 
-//CREATE FUNCTION THAT LOOPS THROUGH OUR ARRAY OF MATCHED AREAS AND FIND THE MATCHING NAMES
+//FUNCTION THAT LOOPS THROUGH OUR ARRAY OF MATCHED AREAS AND FIND THE MATCHING NAMES
     const findAreaNames = (arrayOfAreaIDs, arrayOfAllAreas) => {
     
     const matchedAreaNames = []
@@ -57,10 +57,10 @@ document.addEventListener("click",  (clickEvent) => {
             //LOOP THROUGH THE areaService ARRAY AND GRAB EACH AREA WITH THAT SERVICE AND THROW IT IN AN ARRAY
             const matchedAreaIDs = createMatchingAreasArray(primaryKeyOfArea, allAreaServices)
 
-            //LOOP THROUGH OUR ARRAY OF MATCHED AREAS AND FIND THE MATCHING NAMES
+            //LOOP THROUGH THE matchedAreaIDs ARRAY WE JUST MADE AND FIND THE MATCHING NAMES
             const matchedAreaNames = findAreaNames(matchedAreaIDs, allAreas)
 
-            //USE NAME OF THE SERVICE CLICKED IN THE ALERT
+            //USE NAME OF THE SERVICE CLICKED IN THE ALERT (without having to loop through the array of services)
             const serviceName = itemClicked.innerText 
 
             //ALERT IF ONLY ONE AREA

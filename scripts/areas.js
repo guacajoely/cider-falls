@@ -26,7 +26,7 @@ export const areas = () => {
     return HTML
 }
 
-//LOOP THROUGH THE GUESTS ARRAY AND COUNT EACH GUEST WITH A MATCHING areaID
+//FUNTION THAT LOOPS THROUGH THE GUESTS ARRAY AND COUNT EACH GUEST WITH A MATCHING areaID
 const countAreaGuests = (areaID, guestsArray) => {
               
     let guestCount = 0
@@ -60,7 +60,7 @@ document.addEventListener("click",  (clickEvent) => {
             //ALERT IF ONLY ONE GUEST
             if(guestCount === 1){
                 window.alert(`${matchingArea} currently has ${guestCount} guest`)
-                }
+            }
     
             //ALERT IF 0 OR MULTIPLE GUESTS
             else{
