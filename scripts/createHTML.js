@@ -1,6 +1,6 @@
-import { areaCards } from "./areaCards.js";
+import { areas } from "./areas.js";
 import { guestList } from "./guests.js";
-import { Services } from "./services.js";
+import { services } from "./services.js";
 
 export const createHTML = () => {
     return `
@@ -13,11 +13,11 @@ export const createHTML = () => {
         <section id="main-container">
             <div class="services-and-areas container"
                 <article class="services container">
-                ${Services()}
+                ${services()}
                 </article>
 
                 <article class="areas container">
-                    ${areaCards()}
+                    ${areas()}
                 </article>
             </div>
 

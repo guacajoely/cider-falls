@@ -44,7 +44,7 @@ const database = {
     ],
   
     areas: [
-        { id: 1, name: "Lodge"},
+        { id: 1, name: "The Lodge"},
         { id: 2, name: "Lost Wolf Hiking Trail"},
         { id: 3, name: "Chamfort River"},
         { id: 4, name: "Gander River"},

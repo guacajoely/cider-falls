@@ -1,3 +1,8 @@
+
+::-webkit-scrollbar {width: 13px}
+::-webkit-scrollbar-track {background: darkgreen}
+::-webkit-scrollbar-thumb {background: green}
+
 body {
     color: whitesmoke;
     background-color: darkgreen;
@@ -7,7 +12,6 @@ body {
 header, footer, #main-container {
     display: flex;
     align-items: center;
-    border: thin solid lime;
 }
 
 header, footer {
@@ -17,7 +21,7 @@ header, footer {
 
 header {
     top: 0px;
-    border-bottom: thin solid green;
+    border-bottom: thin solid white;
 }
 
 #img-header {
@@ -60,6 +64,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    border-top: thin solid white;
 }
 
 .area-card {
@@ -74,5 +79,7 @@ footer {
 
 .services-list > li {
     margin-left: 20px;
+    width: 150px;
+    font-size: 18px;
 }
 
