@@ -16,6 +16,32 @@ export const services = () => {
     return HTML
 }
 
+
+//CREATE FUNCTION THAT LOOPS THROUGH THE areaService ARRAY AND GRAB EACH AREA WITH THAT SERVICE AND THROW IT IN AN ARRAY
+const createMatchingAreasArray = (primaryKey, arrayOfServices) => {
+
+    const matchedAreaIDs = []
+    for (const object of arrayOfServices){
+        if (primaryKey === object.serviceID){
+            matchedAreaIDs.push(object.areaID)
+        }
+    }
+
+return matchedAreaIDs
+}
+
+//CREATE FUNCTION THAT LOOPS THROUGH OUR ARRAY OF MATCHED AREAS AND FIND THE MATCHING NAMES
+    const findAreaNames = (arrayOfAreaIDs, arrayOfAllAreas) => {
+    
+    const matchedAreaNames = []
+    for(const areaID of arrayOfAreaIDs){
+        const matchedAreaObject = arrayOfAllAreas.find(item => item.id === areaID);
+        matchedAreaNames.push(matchedAreaObject.name)
+    }
+    return matchedAreaNames
+}
+
+
 document.addEventListener("click",  (clickEvent) => {
 
     //HTML CLICK EVENT TARGET
@@ -29,19 +55,10 @@ document.addEventListener("click",  (clickEvent) => {
             const primaryKeyOfArea =parseInt(primaryKey)
 
             //LOOP THROUGH THE areaService ARRAY AND GRAB EACH AREA WITH THAT SERVICE AND THROW IT IN AN ARRAY
-            const matchedAreaIDs = []
-            for (const object of allAreaServices){
-                if (primaryKeyOfArea === object.serviceID){
-                    matchedAreaIDs.push(object.areaID)
-                }
-            }
-            
+            const matchedAreaIDs = createMatchingAreasArray(primaryKeyOfArea, allAreaServices)
+
             //LOOP THROUGH OUR ARRAY OF MATCHED AREAS AND FIND THE MATCHING NAMES
-            const matchedAreaNames = []
-            for(const areaID of matchedAreaIDs){
-                const matchedAreaObject = allAreas.find(item => item.id === areaID);
-                matchedAreaNames.push(matchedAreaObject.name)
-            }
+            const matchedAreaNames = findAreaNames(matchedAreaIDs, allAreas)
 
             //USE NAME OF THE SERVICE CLICKED IN THE ALERT
             const serviceName = itemClicked.innerText 
@@ -51,6 +68,7 @@ document.addEventListener("click",  (clickEvent) => {
             window.alert(`${matchedAreaNames[0]} offers ${serviceName}`)
             }
 
+            //ALERT IF 2+ AREAS
             else{
             const matchedAreasText = matchedAreaNames.join(", ").replace(/, ((?:.(?!, ))+)$/, ' and $1');
             window.alert(`${matchedAreasText} offer ${serviceName}`)
