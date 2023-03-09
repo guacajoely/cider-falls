@@ -26,6 +26,18 @@ export const areas = () => {
     return HTML
 }
 
+//LOOP THROUGH THE GUESTS ARRAY AND COUNT EACH GUEST WITH A MATCHING areaID
+const countAreaGuests = (areaID, guestsArray) => {
+              
+    let guestCount = 0
+    for (const guest of guestsArray){
+        if (guest.areaID === areaID){
+            guestCount++
+        }
+    }
+    return guestCount
+}
+
 document.addEventListener("click",  (clickEvent) => {
 
     //HTML CLICK EVENT TARGET
@@ -38,19 +50,12 @@ document.addEventListener("click",  (clickEvent) => {
             const [,primaryKey] = itemClicked.id.split("--")
             const primaryKeyOfArea =parseInt(primaryKey)
 
-            //LOOP THROUGH THE GUESTS ARRAY AND COUNT EACH GUEST WITH A MATCHING AREAID
-            let guestCount = 0
-            for (const guest of allGuests){
-                if (primaryKeyOfArea === guest.areaID){
-                    guestCount++
-                }
-            }
-
+            //PASS PRIMARY KEY AND GUESTS ARRAY INTO countAreaGuests FUNCTION
+            const guestCount = countAreaGuests(primaryKeyOfArea,allGuests)
 
             //GRAB THE AREA NAME FROM THE ARRAY OF AREAS USING THE ID
             let matchedAreaObject = allAreas.find(item => item.id === primaryKeyOfArea);
             const matchingArea = matchedAreaObject.name
-
 
             // INSERT INTO ALERT
             window.alert(`${matchingArea} currently has ${guestCount} guests`)
