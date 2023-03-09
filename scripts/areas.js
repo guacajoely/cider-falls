@@ -57,8 +57,15 @@ document.addEventListener("click",  (clickEvent) => {
             let matchedAreaObject = allAreas.find(item => item.id === primaryKeyOfArea);
             const matchingArea = matchedAreaObject.name
 
-            // INSERT INTO ALERT
-            window.alert(`${matchingArea} currently has ${guestCount} guests`)
+            //ALERT IF ONLY ONE GUEST
+            if(guestCount === 1){
+                window.alert(`${matchingArea} currently has ${guestCount} guest`)
+                }
+    
+            //ALERT IF 0 OR MULTIPLE GUESTS
+            else{
+                window.alert(`${matchingArea} currently has ${guestCount} guests`)
+            }
 
         }
     }

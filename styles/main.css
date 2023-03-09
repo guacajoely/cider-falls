@@ -77,7 +77,7 @@ footer {
     align-items: center;
 }
 
-.services-list > li {
+li {
     margin-left: 20px;
     width: 150px;
     font-size: 18px;

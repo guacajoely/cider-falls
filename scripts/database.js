@@ -48,7 +48,7 @@ const database = {
         { id: 2, name: "Lost Wolf Hiking Trail"},
         { id: 3, name: "Chamfort River"},
         { id: 4, name: "Gander River"},
-        { id: 5, name: "Campgrounds"},
+        { id: 5, name: "The Campgrounds"},
         { id: 6, name: "Pine Bluffs Trails"}
     ],
 
@@ -66,7 +66,52 @@ const database = {
         {
         id: 3,
         name: "John Smith",
-        areaID: 3
+        areaID: 1
+        },
+        {
+        id: 4,
+        name: "Arlie Day",
+        areaID: 2
+        },
+        {
+        id: 5,
+        name: "Kaylin Coke",
+        areaID: 4
+        },
+        {
+        id: 6,
+        name: "Finn Vernon",
+        areaID: 5
+        },
+        {
+        id: 7,
+        name: "Gaby Simpkin",
+        areaID: 5
+        },
+        {
+        id: 8,
+        name: "Baker St John",
+        areaID: 5
+        },
+        {
+        id: 9,
+        name: "Juliana Kimball",
+        areaID: 5
+        },
+        {
+        id: 10,
+        name: "Ocean Parkins",
+        areaID: 1
+        },
+        {
+        id: 11,
+        name: "Tommie Henson",
+        areaID: 6
+        },
+        {
+        id: 12,
+        name: "Bryan Wootton",
+        areaID: 6
         },
     ]
   }
